@@ -1,0 +1,47 @@
+<!--  Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+        See LICENSE in the source repository root for complete license information. --><!doctype html><html lang="en"><head><meta charset="utf-8"><title>Available Time Range</title><base href="https://JackSilburn.github.io/ATR2/"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.css"><link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/1.0/fabric.components.css"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><script src="https://appsforoffice.microsoft.com/lib/1/hosted/Office.js" type="text/javascript"></script><script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.debug.js"></script><script>window.history.replaceState = function(){};
+    window.history.pushState = function(){};</script><link href="styles.a0baf4e7d19185d09b19.bundle.css" rel="stylesheet"/></head><body><script>var item;
+
+Office.initialize = function () {
+    item = Office.context.mailbox.item;
+    // Checks for the DOM to load using the jQuery ready function.
+    $(document).ready(function () {
+        // After the DOM is loaded, app-specific code can run.
+        // Set data in the body of the composed item.
+       // setItemBody();
+    });
+}
+
+
+// Get the body type of the composed item, and set data in 
+// in the appropriate data type in the item body.
+function setItemBody() {
+    item.body.getTypeAsync(
+        function (result) {
+            if (result.status == Office.AsyncResultStatus.Failed) {
+                write(result.error.message);
+            }
+            else {
+                // Successfully got the type of item body.
+                // Set data of the appropriate type in body.
+                if (result.value == Office.MailboxEnums.BodyType.Html) {
+                    // Body is of HTML type.
+                    // Specify HTML in the coercionType parameter
+                    // of setSelectedDataAsync.
+                    item.body.setSelectedDataAsync(
+                        '<b> Kindly note we now open 7 days a week.</b>',
+                        {
+                            coercionType: Office.CoercionType.Html,
+                            asyncContext: { var3: 1, var4: 2 }
+                        },
+                        function (asyncResult) {
+                            if (asyncResult.status ==
+                                Office.AsyncResultStatus.Failed) {
+                                write(asyncResult.error.message);
+                            }
+                        }
+                      );
+                }
+            }
+        });
+}</script><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.d1ccd148abff77a83fed.bundle.js"></script><script type="text/javascript" src="scripts.4942e7e3a5befbd580b4.bundle.js"></script><script type="text/javascript" src="main.d777cf662da82ca4aee2.bundle.js"></script></body></html>
