@@ -20,7 +20,9 @@ The CalendarView request is located in 'home.service.ts':
 
 .api('/me/calendarview?startdatetime=' + moment.utc(startParse.source._value).subtract(9.5, 'hours').format() + '&enddatetime=' + moment.utc(endParse.source._value).subtract(9.5, 'hours').format() + '&$top=1000')
 
-**note the start time and end times are subtracted by 9.5. This is to convert the default returned format, UTC, to Darwin time. Also, the element '&$top=1000' defines how many events to return, the default being 10.
+**note** the start time and end times are subtracted by 9.5. This is to convert the default returned format, UTC, to Darwin time. Also, the element '&$top=1000' defines how many events to return, the default being 10.
+
+This project is developed using Angular.
 
 Installation
 ------------
