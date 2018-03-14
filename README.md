@@ -16,7 +16,9 @@ About the Project
 ----------------
 
 Start Date: 16th of February 2018
+
 Project Type: Angular 5
+
 XML manifest version: 1.0
 
 
