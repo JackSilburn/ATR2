@@ -21,6 +21,7 @@ Project Type: Angular 5
 
 XML manifest version: 1.0
 
+(Rhys know of more stuff 4 here?)
 
 Important Points
 ---------------
@@ -37,7 +38,7 @@ Installation
 
 Currently there are two ways to install this add-in and we're still experimenting with both.
 
-<b>1. Request Office administration to add account to add-in user group (preferred)</b>
+<b>1. Request Office administration to add account to add-in user group (preferred)</b> --still waiting for response 4 this
 
 This option is faster to carry out and also means multiple users can be added at once. This process involves contacting the Dialog IT Office administrator (Conan_lastName@dialog.com.au) and requesting the desired user email account(s) to be added to the valid user group for the ATR add-in. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
 
@@ -91,14 +92,15 @@ Adjusting the parameters:
 Contribute
 ----------
 
-This project is hosted on Dialog IT's internal Git. Navigate to 'http://otwdwndevsql01.devnet.dg.internal/Git/' and supply your company credentials. The current project is 'ATR1'.
+The project files are hosted on Dialog IT's internal Git. Navigate to 'http://otwdwndevsql01.devnet.dg.internal/Git/' and supply your company credentials. The current project is 'ATR1'.
 
 To clone the repository, copy 'http://otwdwndevsql01.devnet.dg.internal/Git/ATR1.git' into SourceTree or your Git client of choice. Ensure the command 'npm install' is run (VS Code Integrated Terminal), to install the project's node package modules.
 
-Use 'Npm run start' to compile the project and navigate to 'https://localhost:4200/' in your browser to view the add-in.
+Use 'Npm run start' to compile the project and navigate to 'https://localhost:4200/' in your browser to view the add-in. Additionally you can view the add-in if installed into Outlook 2016.
 
 Deploying
 ---------
+--this part is a little bit dodgy... needs editing 
 
 To deploy the project a few changes need to be made beforehand:
 
