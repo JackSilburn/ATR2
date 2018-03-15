@@ -3,7 +3,7 @@ Available Time Range
 
 The Available Time Range add-in is a Dialog internal project designed to save the user time when scheduling meetings. 
 
-The add-in uses Microsoft's Graph service to retrieve the user's Outlook calendar events. The start and end times inbetween these events are calculated to return an array of free times, which are copied to the user's clipboard for pasting. The ATR add-in is available for use when composing a new email. 
+The add-in uses Microsoft's Graph service to retrieve the user's Outlook calendar events. The start and end times inbetween these events are calculated to return an array of free time slots. These are copied to the user's clipboard and can be pasted into Outlook's email body. The ATR add-in is available for use when composing a new email. 
 
 Design Goals
 ------------
@@ -17,7 +17,7 @@ About the Project
 
 Start Date: 16th of February 2018
 
-Project Type: Angular 5
+Project Type: Angular 5 (mention technology stack, development methodology)
 
 XML manifest version: 1.0
 
@@ -25,33 +25,33 @@ XML manifest version: 1.0
 
 Important Points
 ---------------
-The 'CalendarView' API is primarily used to achieve the above. User's can alter the range of times retrieved by the request using the user interface.
+The 'CalendarView' API is primarily used to achieve the project goal. Users can alter the range of times retrieved by the request using the user interface.
 
 The CalendarView request is located in 'home.service.ts': 
 
 .api('/me/calendarview?startdatetime=' + moment.utc(startParse.source._value).subtract(9.5, 'hours').format() + '&enddatetime=' + moment.utc(endParse.source._value).subtract(9.5, 'hours').format() + '&$top=1000')
 
-**note** the start time and end times are subtracted by 9.5. This is to convert the default returned format, UTC, to Darwin time. Also, the element '&$top=1000' defines how many events to return, the default being 10.
+**note** the start time and end time are subtracted by 9.5. This is to convert the returned default format, UTC, to Darwin time. Also, the element '&$top=1000' defines how many events to return, the default being 10.
 
 Installation
 ------------
 
-Currently there are two ways to install this add-in and we're still experimenting with both.
+Currently, there are two ways to install this add-in and we are still experimenting with both.
 
-<b>1. Request Office administration to add account to add-in user group (preferred)</b> --still waiting for response 4 this
+<b>1. Request Office administration to add account to add-in user group (preferred)</b> --still waiting for response for this
 
-This option is faster to carry out and also means multiple users can be added at once. This process involves contacting the Dialog IT Office administrator (Conan_lastName@dialog.com.au) and requesting the desired user email account(s) to be added to the valid user group for the ATR add-in. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
+This option is faster to carry out and also means multiple users can be added at once. This process involves contacting the Dialog IT Office administrator (Conan_Chiles@dialog.com.au?) and requesting the desired user email account(s) to be added to the valid user group for the ATR add-in. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
 
 <b>2. Manual installation (not recommended)</b>
 
-This option is not preferred because it requires the user(s) Office account to be elevated to a higher license (E3), which are valuable and limited in supply. This is necessary because lower licences (E1) cannot add custom Outlook add-ins. Contact the Dialog IT Office administrator (Conan_lastName@dialog.com.au) and specify the user email accounts to be elevated to E3 licenses. <b>After completing this step a reinstallation of Office 365 is required.</b> 
+This option is not preferred because it requires the user(s) Office account to be elevated to a higher license (E3), which are valuable and limited in supply. This is necessary because lower licences (E1) cannot add custom Outlook add-ins. Contact the Dialog IT Office administrator (Conan_Chiles@dialog.com.au?) and specify the user email accounts to be elevated to E3 licenses. <b>After completing this step a reinstallation of Office 365 is required.</b> 
 
 To add the add-in:
 
       1. Open Outlook 2016 (desktop client).
       2. Click 'Store' on the 'Home' ribbon.
-      3. On the left navigation panel click 'My add-ins'.
-      4. Under 'Custom add-ins' click the drop down 'Add a custom add-in' and choose 'Add from file'.
+      3. On the left navigation panel. click 'My add-ins'.
+      4. Under 'Custom add-ins'. click the dropdown 'Add a custom add-in' and choose 'Add from file'.
       5. Navigate to 'P:\PROJECTS\Dialog Internal Projects\2018 Calendar Available Time\3. Joint Documents'.
       6. Select 'atr-manifest.xml' and press 'Open'.
       7. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
@@ -61,7 +61,7 @@ To uninstall the add-in:
       1. Open Outlook 2016 (desktop client).
       2. Click 'Store' on the 'Home' ribbon.
       3. On the left navigation panel click 'My add-ins'.
-      4. Under 'Custom add-ins' click the 3 dots on the add-in.
+      4. Under 'Custom add-ins', click the 3 dots on the add-in.
       5. Click 'Remove'.
 
 Using the add-in
@@ -70,7 +70,7 @@ Using the add-in
       1. Open a New Email.
       2. Click the ATR add-in which appears on the 'Message' tab of the 'New Email' ribbon.
       3. Click 'Connect' to connect to the Microsoft Graph service.
-      4. If it's your first time using the add-in in this Outlook session, log in is required.
+      4. If it is your first time using the add-in in this Outlook session, log in is required.
       5. Accept any permissions necessary and supply Dialog credientials when prompted.
       
 To use the default parameters:
