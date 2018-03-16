@@ -17,8 +17,8 @@
   <ProviderName>Dialog</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
-  <DisplayName DefaultValue="uploaded test1" />
-  <Description DefaultValue="uploaded test 2"/>
+  <DisplayName DefaultValue="123" />
+  <Description DefaultValue="1234"/>
 
   <!-- Icon for your add-in. Used on installation screens and the add-ins dialog. -->
   <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png" />
@@ -117,8 +117,8 @@
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="uploaded test 3"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="uploaded test 4"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="12345"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="123456"/>
       </bt:ShortStrings>
       <bt:LongStrings>
         <bt:String id="paneReadSuperTipDescription" DefaultValue="test8."/>
