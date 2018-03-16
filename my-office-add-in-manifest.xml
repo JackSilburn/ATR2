@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-XmlReaderSettings settings = new XmlReaderSettings();
-settings.DtdProcessing = DtdProcessing.Parse;
-
 <OfficeApp
           xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
