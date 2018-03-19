@@ -100,18 +100,20 @@ Use 'Npm run start' to compile the project and navigate to 'https://localhost:42
 
 Deploying
 ---------
---this part is a little bit dodgy... needs editing 
 
 To deploy the project a few changes need to be made beforehand:
 
     1. Navigate to 'protractor.conf.js' and uncomment the github Url and comment the localhost Url. Save.
     2. Navigate to 'auth.service.ts' and uncomment the github Url and comment the localhost Url. Save.
     3. Navigate to 'configs.ts' and uncomment the production appId and comment the development appId. Save.
+    4. Open the atr-manifest.xml file and comment all instances of localhost and uncomment all instances of the production URL. Save.
     
 (Undo these changes to return to development)
     
     4. Run 'ng build --prod' in the Integrated Terminal (VS Code) to create a minified version of the project 
     in a folder called 'dist'. 
+    5. Copy the dist folder to the location: \\otwdwndevsql01.devnet.dg.internal\TestATR. Back up the old copy first.
+    6. Repeat this process for the atr-manifest.xml.
     5. Run 'ngh' to push the 'dist' folder and your new changes to the GitHub Pages hosting service.
     
 Navigate to 'https://jacksilburn.github.io/ATR2/' to view the add-in in-browser.
