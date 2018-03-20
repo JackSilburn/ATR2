@@ -114,15 +114,16 @@ To deploy the project a few changes need to be made beforehand:
     
 (Undo these changes to return to development)
     
-    4. Run 'ng build --prod' in the Integrated Terminal (VS Code) to create a minified version of the project 
+    4. Run 'ng build --prod --base-href https://dialogatr.github.io/Available_Time_Range_Add-in/' in the 
+    Integrated Terminal (VS Code) to create a minified version of the project 
     in a folder called 'dist'. 
-    5. Copy the dist folder to the location: \\otwdwndevsql01.devnet.dg.internal\TestATR. Back up the old copy first.
-    6. Repeat this process for the atr-manifest.xml.
-    5. Run 'ngh' to push the 'dist' folder and your new changes to the GitHub Pages hosting service.
+    5. Run 'angular-cli-ghpages --repo=https://github.com/DialogATR/Available_Time_Range_Add-in.git' to push the changes to
+    github.
     
 Navigate to 'https://dialogatr.github.io/Available_Time_Range_Add-in/' to view the add-in in-browser.
 
 **note** If changes are made to the 'atr-manifest.xml' file located at \\otwdwndevsql01.devnet.dg.internal\TestATR, you will need to re-add the add-in to Outlook for the changes to take effect.
+**note** The atr-manifest.xml located at \\otwdwndevsql01.devnet.dg.internal\TestATR is different to the version located in the project folder (aka in visual studio code). The VS code version has links to the local host 4200, whereas the Dialog server version points to the hosted github files location.
    
 Support
 -------
