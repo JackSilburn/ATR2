@@ -17,11 +17,16 @@ About the Project
 
 Start Date: 16th of February 2018
 
-Project Type: Angular 5 (mention technology stack, development methodology)
+•	Angular 5.2.6
+•	Typescript 2.7.2
+•	jQuery 3.3.1
+•	Angular Material 5.2.3
+•	Microsoft Graph Types 1.1.0
+•	Microsoft Graph Client 1.0.0
+•	Microsoft Fabric UI 1.0
+•	Microsoft Office.js 16.0.9
+•	Moment 2.20.1
 
-XML manifest version: 1.0
-
-(Rhys know of more stuff 4 here?)
 
 Important Points
 ---------------
@@ -38,13 +43,13 @@ Installation
 
 Currently, there are two ways to install this add-in and we are still experimenting with both.
 
-<b>1. Request Office administration to add account to add-in user group (preferred)</b> --still waiting for response for this
+<b>1. Request Office administration to add account to add-in user group (not recommended)</b>
 
-This option is faster to carry out and also means multiple users can be added at once. This process involves contacting the Dialog IT Office administrator (Conan_Chiles@dialog.com.au?) and requesting the desired user email account(s) to be added to the valid user group for the ATR add-in. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
+This option is faster to carry out and also means multiple users can be added at once. This process involves contacting the Dialog IT Office administrator and requesting the desired user email account(s) to be added to the valid user group for the ATR add-in. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
 
-<b>2. Manual installation (not recommended)</b>
+<b>2. Manual installation (recommended)</b>
 
-This option is not preferred because it requires the user(s) Office account to be elevated to a higher license (E3), which are valuable and limited in supply. This is necessary because lower licences (E1) cannot add custom Outlook add-ins. Contact the Dialog IT Office administrator (Conan_Chiles@dialog.com.au?) and specify the user email accounts to be elevated to E3 licenses. <b>After completing this step a reinstallation of Office 365 is required.</b> 
+This option is not preferred because it requires the user(s) Office account to be elevated to a higher license (E3), which are valuable and limited in supply. This is necessary because lower licences (E1) cannot add custom Outlook add-ins. Contact the Dialog IT Office administrator and specify the user email accounts to be elevated to E3 licenses. <b>After completing this step a reinstallation of Office 365 is required.</b> 
 
 To add the add-in:
 
@@ -52,7 +57,7 @@ To add the add-in:
       2. Click 'Store' on the 'Home' ribbon.
       3. On the left navigation panel. click 'My add-ins'.
       4. Under 'Custom add-ins'. click the dropdown 'Add a custom add-in' and choose 'Add from file'.
-      5. Navigate to 'P:\PROJECTS\Dialog Internal Projects\2018 Calendar Available Time\3. Joint Documents'.
+      5. Navigate to '\\otwdwndevsql01.devnet.dg.internal\TestATR' within file explorer.
       6. Select 'atr-manifest.xml' and press 'Open'.
       7. The ATR add-in will now appear on the 'Message' tab of the 'New Email' ribbon as a clickable button.
 
@@ -106,7 +111,6 @@ To deploy the project a few changes need to be made beforehand:
     1. Navigate to 'protractor.conf.js' and uncomment the github Url and comment the localhost Url. Save.
     2. Navigate to 'auth.service.ts' and uncomment the github Url and comment the localhost Url. Save.
     3. Navigate to 'configs.ts' and uncomment the production appId and comment the development appId. Save.
-    4. Open the atr-manifest.xml file and comment all instances of localhost and uncomment all instances of the production URL. Save.
     
 (Undo these changes to return to development)
     
@@ -116,20 +120,10 @@ To deploy the project a few changes need to be made beforehand:
     6. Repeat this process for the atr-manifest.xml.
     5. Run 'ngh' to push the 'dist' folder and your new changes to the GitHub Pages hosting service.
     
-Navigate to 'https://jacksilburn.github.io/ATR2/' to view the add-in in-browser.
+Navigate to 'https://dialogatr.github.io/Available_Time_Range_Add-in/' to view the add-in in-browser.
 
-**note** If changes are made to the 'atr-manifest.xml' file in the root directory:
-
-    1. Contact the Dialog IT Office administrator, who will circulate the changes to the add-in user group.
-    
-    (if install option 1 was used)
-    
-or
-    
-    2. Distribute the new manifest to the users and request they reinstall the add-in in Outlook 2016 
-    
-    (if install option 2 was used).
-    
+**note** If changes are made to the 'atr-manifest.xml' file located at \\otwdwndevsql01.devnet.dg.internal\TestATR, you will need to re-add the add-in to Outlook for the changes to take effect.
+   
 Support
 -------
 
